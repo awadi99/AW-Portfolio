@@ -1,0 +1,58 @@
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Build outputs
+dist/
+build/
+coverage/
+.temp/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# PM2 logs and dumps
+pids
+*.pid
+*.seed
+*.pid.lock
+pm2.log
+pm2-error.log
+
+# Editor folders
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# System files
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# TypeScript generated files (optional)
+*.tsbuildinfo
+
+# Uploaded files (if your backend stores uploads locally)
+uploads/
+public/uploads/
+
+# Cache files
+.cache/
+.nyc_output/
