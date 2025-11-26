@@ -87,58 +87,38 @@
 }
 
 
-/* animated gradient border like the example */
-@property --border-angle {
-    syntax: "<angle>";
-    inherits: false;
-    initial-value: 0deg;
-}
-
-.animated-gradient-border {
+.animated-border {
     position: relative;
-    border-radius: 20px;
-    padding: 2px;
-    background: transparent;
-    isolation: isolate;
+    padding: 4px;
+    /* border thickness */
+    border-radius: 9999px;
+    /* full round pill */
+    background: linear-gradient(90deg, #00cea8, #bf61ff, #00cea8);
+    background-size: 300% 300%;
+    animation: moveGradient 4s ease infinite;
 }
 
-.animated-gradient-border::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: inherit;
-    background:
-        linear-gradient(45deg, #0f1724 0%, #0f1724 100%) padding-box,
-        conic-gradient(from var(--border-angle),
-            rgba(0, 206, 168, 0.9),
-            #bf61ff 40%,
-            rgba(60, 51, 80, 0.45) 75%) border-box;
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0) !important;
-    -webkit-mask-composite: xor !important;
-    mask-composite: exclude !important;
-    background-size: 200% 200%;
-    animation: rotateBorder 3.5s linear infinite;
-    pointer-events: none;
-    z-index: 0;
-}
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
 
-.animated-gradient-border>.inner-card {
-    position: relative;
-    border-radius: calc(20px - 2px);
-    z-index: 1;
-    overflow: hidden;
-}
+    50% {
+        background-position: 100% 50%;
+    }
 
-/* rotation */
-@keyframes rotateBorder {
-    to {
-        --border-angle: 360deg;
+    100% {
+        background-position: 0% 50%;
     }
 }
 
+/* inner area */
+.animated-border .inner {
+    background: #0a0d1a;
+    /* your dark bg */
+    border-radius: inherit;
+    padding: 12px 20px;
+}
 
 /* Animated moving gradient border */
 .moving-border {
