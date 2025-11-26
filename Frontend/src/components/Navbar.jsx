@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className={`
-    ${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary `}>
+    ${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary h-20 `}>
       <div className="w-full flex justify-between items-center max-w-7xl  mx-auto ">
         <Link to="/" className="flex items-center gap-2"
           onClick={() => {
@@ -18,7 +18,7 @@ export default function Navbar() {
           }}
         >
 
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain sm:translate-x-45 translate-x-0" />
+          <img src={logo} alt="logo" className="w-13 h-13 object-contain sm:translate-x-45 translate-x-0 rounded-full" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex  sm:translate-x-45 translate-x-0"> &nbsp;  Aditya &nbsp;<span className="sm:block hidden font-bold  "> |&nbsp; Mern Developer</span></p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10 -translate-x-5 ">
