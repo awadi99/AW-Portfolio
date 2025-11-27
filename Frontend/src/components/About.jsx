@@ -44,7 +44,7 @@ function About() {
         </motion.p>
 
         <motion.img
-          src="src/assets/my.jpg"
+          src="../assets/my.jpg"
           className="animated-border rounded-full w-40 h-40 object-cover translate-x-20 sm:-translate-x-10"
           animate={{
             y: [15, -15, 15],
