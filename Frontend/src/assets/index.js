@@ -8,8 +8,8 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
+import render from "./tech/render.png";
+import mui from "./tech/mui.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
@@ -18,7 +18,7 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
+import arcject from "./tech/arcject.png";
 import threejs from "./tech/threejs.svg";
 
 import Ajspire from "./company/Ajspire.png";
@@ -37,8 +37,8 @@ export {
   menu,
   close,
   css,
-  docker,
-  figma,
+  render,
+  mui,
   git,
   html,
   javascript,
@@ -47,7 +47,7 @@ export {
   reactjs,
   redux,
   tailwind,
-  typescript,
+  arcject,
   threejs,
   Ajspire,
   carrent,

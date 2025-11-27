@@ -4,7 +4,7 @@ import {
   creator,
   web,
   javascript,
-  typescript,
+  arcject,
   html,
   css,
   reactjs,
@@ -13,13 +13,14 @@ import {
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
   Ajspire,
   carrent,
   jobit,
   tripguide,
   threejs,
+  render,
+  mui,
+  
 } from "../assets";
 
 export const navLinks = [
@@ -70,8 +71,8 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Arcject",
+    icon: arcject,
   },
   {
     name: "React JS",
@@ -102,12 +103,12 @@ const technologies = [
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Material-Ui",
+    icon: mui,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Render",
+    icon: render,
   },
 ];
 
