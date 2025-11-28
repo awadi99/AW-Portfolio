@@ -83,7 +83,7 @@ function Works() {
                     target="_blank"
                     className="github-btn-rounded"
                   >
-                    <img src={github} className="object-contain"/>
+                    <img src={github} alt="GitHub repository" className="object-contain"/>
                   </a>
 
                   <div className="overlay">
