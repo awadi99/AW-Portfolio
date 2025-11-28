@@ -23,9 +23,11 @@ import threejs from "./tech/threejs.svg";
 
 import Ajspire from "./company/Ajspire.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import Ecode from "./E-codeproject.png";
+import Chatteraibox from "./chatteraibox.png";
+import Spotifyui from "./spotifyui.png";
+import Simonsay from "./simonsay.png";
+import Quora from './quora-post.png'
 import my from "./my.jpg"
 
 export {
@@ -51,8 +53,10 @@ export {
   arcject,
   threejs,
   Ajspire,
-  carrent,
-  jobit,
-  tripguide,
+  Ecode,
+  Chatteraibox,
+  Spotifyui,
+  Simonsay,
+  Quora,
   my
 };

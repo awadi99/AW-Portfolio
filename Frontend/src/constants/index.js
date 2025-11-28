@@ -14,13 +14,14 @@ import {
   mongodb,
   git,
   Ajspire,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   render,
   mui,
-  
+  Ecode,
+  Chatteraibox,
+  Spotifyui,
+  Simonsay,
+  Quora
 } from "../assets";
 
 export const navLinks = [
@@ -172,67 +173,133 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "E-Code Solutions 🌿 ",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    "E-Code Solutions ♻️ is a full-stack E-Commerce web application built using the MERN stack (MongoDB, Express.js, React, Node.js). It allows Users to add products, while Customers and Companies can browse and purchase them with ease",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Node",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Mongodb",
         color: "green-text-gradient",
       },
+
       {
         name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: Ecode,
+    source_code_link: "https://github.com/awadi99/E---Code-Solutions.git",
+    source_code_Live_link:"https://e-code-solutions-srr9.onrender.com"
   },
   {
-    name: "Job IT",
+    name: "Chatter Ai Box 🤖",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Chatter AI Box is a ⚙️ real-time chat application built using the MERN stack. It supports AI-powered messaging, real-time translation, image sharing, JWT authentication, and email invitations.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Restapi",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Node",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MongoDb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JWT",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Socket.io",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: Chatteraibox,
+    source_code_link: "https://github.com/awadi99/Chatter-Ai-Box.git",
+    source_code_Live_link:"https://chatter-ai-box-frontend.onrender.com"
+
   },
   {
-    name: "Trip Guide",
+    name: "Quora-Post 📬 ",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A simple Node.js + Express + EJS web application that allows users to create, read, update, and delete posts (CRUD) like a mini Quora. The project uses RESTful routes and is styled with TailwindCss.",
     tags: [
       {
-        name: "nextjs",
+        name: "Express",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "EJS",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "TailwindCss",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: Quora,
+    source_code_link: "https://github.com/awadi99/awadi99-quora-post-project-with-restfuI-api.git",
+    source_code_Live_link:"https://awadi99-quora-post-project-with-restfui.onrender.com"
+  },
+
+  {
+    name: "Simon Say Game 🎮 ",
+    description:
+      "A modern and animated 🗽version of the classic Simon Says memory game using HTML, CSS, and JavaScript. Simon Says Game – A classic memory challenge built using HTML, CSS, and JavaScript. Press any key to start, watch the color sequence, and repeat it by clicking the buttons. With each level, the sequence gets longer and harder. Test your memory and see how high you can score!",
+    tags: [
+      {
+        name: "HTML5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: Simonsay,
+    source_code_link: "https://github.com/awadi99/Simon-Says-Game.git",
+    source_code_Live_link:"https://codepen.io/awadi99/pen/OPypdjg"
+  },
+  {
+    name: "Spotify UI 📱 ",
+    description:
+      "🔰A responsive navigation bar. Album art displays. Media controls with clean layouts. Visually appealing color schemes and fonts. No JavaScript or frameworks were used, making this project a demonstration of the power of pure HTML and CSS in creating modern, user-friendly web designs.",
+    tags: [
+      {
+        name: "HTML5",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: Spotifyui,
+    source_code_link: "https://github.com/awadi99/tutorial-spotify-ui-design-clone.git",
+    source_code_Live_link:"https://spotify-ui-design-clone-made-by-aw.onrender.com"
   },
 ];
 
