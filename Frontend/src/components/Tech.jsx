@@ -8,10 +8,10 @@ function Tech() {
   return (
     <>
     <motion.div  variants={textVariant()}>
-    <p className={`${styles.heroSubText} !mt-[90px] !text-[20px] opacity-50 !px-[90px]`}>
+    <p className={`${styles.sectionSubText} !mt-[90px] !px-[90px]`}>
       My Technology
     </p>
-    <h2 className={`${styles.heroHeadText} !text-[66px] !px-[90px]`}>
+    <h2 className={`${styles.sectionHeadText} !px-[90px]`}>
       Tech Stack.
     </h2>
   </motion.div>

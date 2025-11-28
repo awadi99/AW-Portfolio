@@ -27,10 +27,10 @@ function Works() {
   return (
     <>
     <motion.div  variants={textVariant()}>
-      <p className={`${styles.heroSubText} !text-[20px] opacity-50 !px-[90px]`}>
+      <p className={`${styles.sectionSubText} !mt-[90px]  !px-[90px]`}>
         My work
       </p>
-      <h2 className={`${styles.heroHeadText} !text-[66px] !px-[90px]`}>
+      <h2 className={`${styles.sectionHeadText} !px-[90px]`}>
         Projects.
       </h2>
     </motion.div>
