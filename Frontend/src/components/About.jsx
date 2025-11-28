@@ -4,6 +4,7 @@ import { styles } from './../../style.js'
 import { services } from '../constants/index.js'
 import { fadeIn, textVariant } from '../utils/motion.js';
 import { SectionWapper } from './../hoc/index.js'
+import {my} from './../assets/index.js'
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt
     className="xs:w-[250px] w-full"
@@ -44,7 +45,7 @@ function About() {
         </motion.p>
 
         <motion.img
-          src="../assets/my.jpg"
+          src={my}
           className="animated-border rounded-full w-40 h-40 object-cover translate-x-20 sm:-translate-x-10"
           animate={{
             y: [15, -15, 15],
