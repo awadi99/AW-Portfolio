@@ -20,7 +20,7 @@ export default function Hero() {
         </h1>
         <p className="text-secondary text-xl mt-2">MERN Developer</p>
       </div>
-      {/* <ComputersCanvas/> */}
+      <ComputersCanvas/>
 
     </section>
 
