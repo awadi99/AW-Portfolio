@@ -5,14 +5,13 @@ export const getContacts = async(req,res)=>{
     try{
         if(!name || !email || !message)
         {
-            return res.status(400).json({msg:"Please Provide vaild Informations"});
+            return res.status(400).json({msg:"Please Provide valid Information"});
         }
         const emailRegex =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; 
         if(!emailRegex.test(email))
         {
-            return res.status(400).json({msg:"Please Provide vaild Email"});
+            return res.status(400).json({msg:"Please Provide valid Email"});
         }
-        
         const info = new Contacts({
             name,
             email,
@@ -20,7 +19,7 @@ export const getContacts = async(req,res)=>{
         });
 
         const value =  await info.save();
-            res.status(201).json({msg:"Message Sent Successful"});
+            res.status(201).json({msg:"Message Sent Successfully"});
 
     }
     catch(error){

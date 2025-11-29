@@ -7,16 +7,20 @@ const ContactSchema = new mongoose.Schema({
     },
     email:{
         type:String,
-        required:true
-    },
-    message:{
+        required:true,
+        validate: {
+            validator: function(v) {
+                return /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/.test(v);
+            },
+            message: 'Please enter a valid email address'
+        }
+    },    message:{
         type:String,
         required:true
     }
 
 },{timestamps: true })
 
-const Contacts = new mongoose.model("Contacts", ContactSchema);
-
+const Contacts = mongoose.model("Contacts", ContactSchema);
 
 export default Contacts;
