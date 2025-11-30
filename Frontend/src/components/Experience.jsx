@@ -64,4 +64,4 @@ function Experience() {
   );
 }
 
-export default SectionWapper(Experience, "experience");
+export default SectionWapper(Experience, "");
