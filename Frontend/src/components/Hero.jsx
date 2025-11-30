@@ -26,7 +26,6 @@ export default function Hero() {
           MERN Developer
         </p>
       </div>
-
       {/* ⭐ COMPACT 3D MODEL */}
       <div className="absolute bottom-0 right-0 w-full h-[190px] sm:h-[400px] md:h-[500px]">
         <ComputersCanvas />
