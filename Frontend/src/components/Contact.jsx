@@ -47,15 +47,15 @@ function Contact() {
     setFrom({ ...from, [name]: value });
   }
   return (
-    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden !px-[90px] !p-10" >
+    <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden !p-10 " >
       <motion.div
         variants={slideIn("left", "tween", 0.1, 1.5)}
-        className="flex-[0.75] bg-black-100 !p-8 rounded-2xl  ">
+        className="flex-[0.75] bg-black-100 !p-8 rounded-2xl sm:w-auto w-auto  ">
         <p className={`${styles.sectionSubText} `}>Get in touch</p>
         <h3 className={`${styles.sectionHeadText} !mb-10 `}>Contact.</h3>
         <form action="" ref={fromRef}
           onSubmit={sendValue}
-          className="mt-12 flex flex-col gap-8">
+          className="mt-12 flex flex-col gap-8 ">
 
           <label htmlFor="name" className="flex flex-col">
             <span className="text-white font-medium">Your Name</span>
