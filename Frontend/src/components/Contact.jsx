@@ -23,7 +23,7 @@ function Contact() {
     e.preventDefault();
     setLoading(true);
     try {
-    const res = await axios.post("https://aw-portfolio.onrender.com/api/person/contacts",from);
+    const res = await axios.post("https://aw-portfolio-backend.onrender.com/api/person/contacts",from);
     toast.success(res.data.msg || "Message sent!");
     setFrom({
       name:"",
