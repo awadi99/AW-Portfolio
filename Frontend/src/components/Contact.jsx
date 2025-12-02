@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser';
 import { styles } from '../../style.js'
 import { EarthCanvas } from './../components/canvas/index.js'
+import SceneCanvas from './canvas/SceneCanvas.jsx'
 import { SectionWapper } from './../hoc/index.js'
 import { slideIn } from "../utils/motion.js";
 import axios from "axios";

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { styles } from "./../../style.js";
-import { ComputersCanvas } from "./canvas/index.js";
+// import { ComputersCanvas } from "./canvas/index.js";
+import SceneCanvas from './canvas/SceneCanvas.jsx'
 import heroBg from '/src/assets/herobg.png';
 
 export default function Hero() {
@@ -20,7 +21,7 @@ export default function Hero() {
         </h1>
         <p className="text-secondary text-xl mt-2">MERN Developer</p>
       </div>
-      <ComputersCanvas/>
+      <SceneCanvas/>
 
     </section>
 

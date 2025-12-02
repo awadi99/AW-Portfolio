@@ -1,51 +1,49 @@
-import { useState, useRef, Suspense } from "react";
+import { useRef, Suspense, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Points, PointMaterial, Preload } from "@react-three/drei";
+import { Points, PointMaterial } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 
-
-
-
-export const Stars = (props) => {
+function Stars() {
   const ref = useRef();
-  const sphere =  random.inSphere(new Float32Array(5000),{radius: 1.2})
-  useFrame((state,delta)=>{
-    ref.current.rotation.x -=delta/10;
-    ref.current.rotation.y -=delta/15;
-  })
+
+  // lower particles for mobile performance
+  const stars = useMemo(() => random.inSphere(new Float32Array(3000), { radius: 1.2 }), []);
+
+  useFrame((_, delta) => {
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 15;
+      ref.current.rotation.y -= delta / 20;
+    }
+  });
+
   return (
-  <>
-
-    <group rotation={[0,0, Math.PI/4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
-        <PointMaterial 
-        transparent
-        color="#f272c8"
-        size={0.002}
-        sizeAttenuation={true}
-        depthWrite={false}
-        ></PointMaterial>
-        </Points>    </group>
-
-  </>
-)
-
+    <group rotation={[0, 0, Math.PI / 4]}>
+      <Points ref={ref} positions={stars} stride={3} frustumCulled>
+        <PointMaterial
+          transparent
+          color="#c770f0"
+          size={0.0018}
+          sizeAttenuation
+          depthWrite={false}
+        />
+      </Points>
+    </group>
+  );
 }
-function StarsCanvas() {
+
+export default function StarsCanvas() {
   return (
-    <>
-    <div className="w-full h-auto absolute inset-0 z-[-1]">
-      <Canvas camera={{position:[0,0,1]}}>
+    <div className="absolute inset-0 -z-10 w-full h-full">
+      <Canvas
+        camera={{ position: [0, 0, 1] }}
+        gl={{ antialias: false, powerPreference: "low-power" }} 
+        dpr={[1, 1.5]}
+        frameloop="always"
+      >
         <Suspense fallback={null}>
-          <Stars/>
+          <Stars />
         </Suspense>
-        <Preload all />
       </Canvas>
-
     </div>
-    </>
-  )
+  );
 }
-
-
-export default StarsCanvas;
