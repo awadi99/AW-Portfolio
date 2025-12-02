@@ -29,6 +29,7 @@ import Spotifyui from "./spotifyui.png";
 import Simonsay from "./simonsay.png";
 import Quora from './quora-post.png'
 import my from "./my.jpg"
+import desktop from './desktop.png'
 
 export {
   logo,
@@ -58,5 +59,6 @@ export {
   Spotifyui,
   Simonsay,
   Quora,
-  my
+  my,
+  desktop
 };

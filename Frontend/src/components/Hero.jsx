@@ -3,6 +3,7 @@ import { styles } from "./../../style.js";
 // import { ComputersCanvas } from "./canvas/index.js";
 import SceneCanvas from './canvas/SceneCanvas.jsx'
 import heroBg from '/src/assets/herobg.png';
+import {desktop} from './../assets/index.js'
 
 export default function Hero() {
   return (
