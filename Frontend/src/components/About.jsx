@@ -4,7 +4,7 @@ import { styles } from './../../style.js'
 import { services } from '../constants/index.js'
 import { fadeIn, textVariant } from '../utils/motion.js';
 import { SectionWapper } from './../hoc/index.js'
-import {my} from './../assets/index.js'
+import { my } from './../assets/index.js'
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt
     className="xs:w-[250px] w-full"
@@ -32,18 +32,19 @@ function About() {
         <p className={`${styles.sectionSubText} !px-[90px]`}>Introduction</p>
         <h2 className={`${styles.sectionHeadText} !px-[90px]`}>OverView.</h2>
       </motion.div>
-      <div className="flex flex-col md:flex-row items-start gap-10 w-full">
+      <div className="flex flex-col md:flex-row items-start gap-10 w-full !sm:w-full">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="!px-[90px] mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="!p-[40px] mt-4 text-secondary text-[17px] max-w-7xl leading-[30px] text-justify 
+             [word-spacing:-3px] sm:[word-spacing:0px]"
         >
-          Hi, I am a Front-End & MERN Stack Developer from Pune,
-          specializing in building clean, responsive, and user-friendly web applications
-          using React, Node.js, Express, and MongoDB. I have developed full-stack projects
-          like an E-Waste Management Platform, a real-time AI Chat Application, and a Quora-style content posting system.
-          I focus on writing scalable code, improving performance, and continuously learning new technologies to build modern digital experiences.
+          Hi, I am a Front-End & MERN Stack Developer from Pune, specializing in building clean,
+          responsive, and user-friendly web applications using React, Node.js, Express, and MongoDB.
+          I have developed full-stack projects like an E-Waste Management Platform, a real-time AI Chat
+          Application, and a Quora-style content posting system. I focus on writing scalable code,
+          improving performance and continuously learning new technologies to build modern digital
+          experiences.
         </motion.p>
-
         <motion.img
           src={my}
           className="animated-border rounded-full w-40 h-40 object-cover translate-x-20 sm:-translate-x-10"

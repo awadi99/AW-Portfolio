@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../cart.css";
 import SectionWapper from "../hoc/SectionWapper.jsx";
 import { github } from "../assets/index.js";
@@ -7,45 +7,63 @@ import { textVariant } from "../utils/motion.js";
 import { styles } from "../../style.js";
 import { projects } from "../constants/index.js";
 
+
+import Swiper from "swiper";
+import { EffectCards, Navigation } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "swiper/css/navigation";
+
 function Works() {
   const [activeProject, setActiveProject] = useState(projects[0]);
+  const swiperRef = useRef(null);
 
   useEffect(() => {
-    new Swiper(".swiper", {
+    if (!swiperRef.current) return;
+
+    const swiper = new Swiper(swiperRef.current, {
+      modules: [EffectCards, Navigation],
       effect: "cards",
       grabCursor: true,
       initialSlide: 0,
-      speed: 500,
       loop: true,
+      speed: 600,
+
       cardsEffect: {
         rotate: true,
         slideShadows: true,
       },
+
       navigation: {
         nextEl: ".next-btn",
         prevEl: ".prev-btn",
       },
+
       on: {
         slideChange: function () {
           setActiveProject(projects[this.realIndex]);
         },
       },
     });
+
+    return () => swiper.destroy(true, true);
   }, []);
 
   return (
     <>
+      
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} !mt-[90px] !px-[90px]`}>
           My Work
         </p>
-        <h2 className={`${styles.sectionHeadText} !px-[90px]`}>
-          Projects.
-        </h2>
+        <h2 className={`${styles.sectionHeadText} !px-[90px]`}>Projects.</h2>
       </motion.div>
+
 
       <section className="movie-section contrast-100">
         <div className="content">
+
           <div className="info">
             <h2 className="text-[32px] font-bold text-white mb-4">
               {activeProject.name}
@@ -67,23 +85,39 @@ function Works() {
               ))}
             </div>
 
-            <a href={activeProject.source_code_Live_link} target="_blank" >
-              <button className="btn !mt-10 !bg-purple-600 !text-white !rounded-4xl animate-bounce">Live Demo</button>
+            <a
+              href={activeProject.source_code_Live_link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn !mt-10 !bg-purple-600 !text-white !rounded-4xl animate-bounce">
+                Live Demo
+              </button>
             </a>
           </div>
 
-          <div className="swiper">
+          
+          <div ref={swiperRef} className="swiper">
             <div className="swiper-wrapper">
               {projects.map((project, index) => (
                 <div className="swiper-slide" key={index}>
-                  <img src={project.image} alt={project.name} className="card-image" />
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="card-image"
+                  />
 
                   <a
                     href={project.source_code_link}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="github-btn-rounded"
                   >
-                    <img src={github} alt="GitHub repository" className="object-contain"/>
+                    <img
+                      src={github}
+                      alt="GitHub repository"
+                      className="object-contain"
+                    />
                   </a>
 
                   <div className="overlay">
@@ -94,11 +128,13 @@ function Works() {
               ))}
             </div>
 
+            
             <button className="prev-btn nav-btn">‹</button>
             <button className="next-btn nav-btn">›</button>
           </div>
         </div>
 
+        
         <ul className="circles">
           {Array.from({ length: 10 }).map((_, i) => (
             <li key={i}></li>
