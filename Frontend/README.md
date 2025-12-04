@@ -1,16 +1,47 @@
-# React + Vite
+# ⚛️ React + ⚡ Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal and modern setup to build **fast React applications** using **Vite**, featuring HMR, ESLint rules, and optional compiler support.
 
-Currently, two official plugins are available:
+This template is perfect for developers who want:
+- 🚀 Ultra-fast development  
+- 🔥 Hot Module Replacement (HMR)  
+- 🎯 Clean project structure  
+- 🛠️ Easy plugin configuration  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌟 What's Included?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔌 Official React Plugins
+You can choose between two official Vite plugins:
 
-## Expanding the ESLint configuration
+- **[@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react)**  
+  Uses **Babel** (or **oxc** with rolldown) and supports Fast Refresh.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **[@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)**  
+  Uses **SWC** for faster, native-speed compilation and Fast Refresh.
+
+---
+
+## 🧠 React Compiler (Optional)
+
+The **React Compiler** is *not enabled* in this template because it impacts build and development performance.
+
+If you want to enable it:  
+👉 Follow the official guide here:  
+https://react.dev/learn/react-compiler/installation
+
+---
+
+## 📁 File Structure
+```bash
+project/
+ ├── public/
+ ├── src/
+ │     ├── assets/
+ │     ├── components/
+ │     ├── App.jsx
+ │     └── main.jsx
+ ├── index.html
+ ├── vite.config.js
+ └── package.json
