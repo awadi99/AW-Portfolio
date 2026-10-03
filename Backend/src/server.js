@@ -1,13 +1,10 @@
 import express from 'express'
 import cors from 'cors';
+import app from './app.js';
 import dotenv from 'dotenv'
-import connection from './lib/database.js';
-import ContactsInfo from './router/router.js';
-
+import connection from './config/database.js';
 
 dotenv.config();
-
-const app = express();
 
 app.use(cors({
     origin:[
@@ -22,9 +19,9 @@ const PORT =process.env.PORT || 3000;
 
 
 connection();
-app.listen(PORT,()=>{
-    console.log("Server running on this Port = ",PORT)
+const server = app.listen(PORT,(req,res)=>{
+    console.log("Server running on = ",PORT)
 });
 
-app.use("/api/person",ContactsInfo)
+export default server;
 
