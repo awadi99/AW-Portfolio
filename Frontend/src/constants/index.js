@@ -14,6 +14,7 @@ import {
   mongodb,
   git,
   Ajspire,
+  freelancer,
   threejs,
   render,
   mui,
@@ -21,7 +22,9 @@ import {
   Chatteraibox,
   Spotifyui,
   Simonsay,
-  Quora
+  Quora,
+  ksa,
+  SRGroup,
 } from "../assets";
 
 export const navLinks = [
@@ -43,6 +46,10 @@ const services = [
   {
     title: "Web Developer",
     icon: web,
+  },
+  {
+    title: "Freelance Full-Stack Developer",
+    icon: backend,
   },
   {
     title: "React Developer",
@@ -140,7 +147,28 @@ const experiences = [
       "Integrated forms, handled validation, and improved user dashboard flows.",
       "Enhanced overall user experience by fixing layout issues and reducing UI bugs."
     ],
-  }
+  },
+
+  {
+    title: "Freelance Full Stack Developer",
+    
+    company_name: "Freelancer / Self-Employed",
+    
+    icon: freelancer, 
+    
+    iconBg: "#383E56",
+    
+    date: "Jan 2026 – Present",
+    
+    points: [
+    "Built and deployed 2+ full-stack web applications using React.js, Node.js, Express.js, and MongoDB.",
+    "Developed a real-estate website for SR Group Builders with a CRUD-based content management system.",
+    "Developed an educational platform for Karmaveer Science Academy with admission forms and an online test module.",
+    "Designed responsive user interfaces and integrated RESTful APIs to deliver complete end-to-end web applications."
+    ],
+    
+    }
+    
 ];
 
 
@@ -303,4 +331,72 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+
+// freelancer
+
+
+const freelanceProjects = [
+  {
+    name: "SR Group Builders 🏗️",
+    description:
+    "A professional real-estate website developed for SR Group Builders. Built a responsive frontend and integrated a CRUD-based content management system to manage website content and improve customer inquiries.",
+    tags: [
+    {
+    name: "React",
+    color: "blue-text-gradient",
+    },
+    {
+    name: "Node",
+    color: "pink-text-gradient",
+    },
+    {
+    name: "Express",
+    color: "green-text-gradient",
+    },
+    {
+    name: "MongoDB",
+    color: "green-text-gradient",
+    },
+    {
+      name: "Redis",
+      color: "green-text-gradient",
+      },
+    ],
+    image: SRGroup,
+    source_code_link: "https://github.com/awadi99/SR-GROUP-PROMOTER-BUILDERS.git",
+    source_code_Live_link: "https://srgroupandbuilders.com",
+    },
+    
+    {
+    name: "KSA Academy🎓",
+    description:
+    "An educational platform developed for Karmaveer Science Academy with admission forms and an online test module. The platform helps streamline the admission process and reduce manual work.",
+    tags: [
+    {
+    name: "React",
+    color: "blue-text-gradient",
+    },
+    {
+    name: "Node",
+    color: "pink-text-gradient",
+    },
+    {
+    name: "Express",
+    color: "green-text-gradient",
+    },
+    {
+    name: "MongoDB",
+    color: "green-text-gradient",
+    },
+    {
+      name: "Redis",
+      color: "green-text-gradient",
+      },
+    ],
+    image: ksa,
+    source_code_link: "https://github.com/awadi99/KARMAVEER-SCIENCE-ACADEMY.git",
+    source_code_Live_link: "https://karmaveerscienceacademy.in",
+    },
+    
+];
+export { services, technologies, experiences, testimonials, projects, freelanceProjects };

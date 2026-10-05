@@ -22,6 +22,7 @@ import arcject from "./tech/arcject.png";
 import threejs from "./tech/threejs.svg";
 
 import Ajspire from "./company/Ajspire.png";
+import freelancer from "./company/freelancer.webp";
 
 import Ecode from "./E-codeproject.png";
 import Chatteraibox from "./chatteraibox.png";
@@ -30,6 +31,10 @@ import Simonsay from "./simonsay.png";
 import Quora from './quora-post.png'
 import my from "./my.jpg"
 import desktop from './desktop.png'
+
+
+import ksa from "./ksa.png";
+import SRGroup from "./SRGroup.png";
 
 export {
   logo,
@@ -54,11 +59,15 @@ export {
   arcject,
   threejs,
   Ajspire,
+  freelancer,
   Ecode,
   Chatteraibox,
   Spotifyui,
   Simonsay,
   Quora,
   my,
-  desktop
+  desktop,
+
+  ksa,
+  SRGroup,
 };
