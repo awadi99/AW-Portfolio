@@ -16,6 +16,8 @@ import {
   Ajspire,
   freelancer,
   threejs,
+  Typescript,
+  redis,
   render,
   mui,
   Ecode,
@@ -35,6 +37,10 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "freelancework",
+    title: "Freelance Work",
   },
   {
     id: "contact",
@@ -67,58 +73,67 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+      name: "Moon HTML 5",
+      icon: html,
   },
   {
-    name: "CSS 3",
-    icon: css,
+      name: "Moon CSS 3",
+      icon: css,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+      name: "Moon JavaScript",
+      icon: javascript,
   },
   {
-    name: "Arcject",
-    icon: arcject,
+      name: "Moon Arcjet",
+      icon: arcject,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+      name: "Moon React JS",
+      icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+      name: "Moon Redux Toolkit",
+      icon: redux,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+      name: "Moon Tailwind CSS",
+      icon: tailwind,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+      name: "Moon Node JS",
+      icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+      name: "Moon MongoDB",
+      icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+      name: "Moon Three JS",
+      icon: threejs,
   },
   {
-    name: "git",
-    icon: git,
+      name: "Moon Git",
+      icon: git,
   },
   {
-    name: "Material-Ui",
-    icon: mui,
+      name: "Moon Material UI",
+      icon: mui,
   },
   {
-    name: "Render",
-    icon: render,
+      name: "Moon Render",
+      icon: render,
+  },
+  {
+      name: "Moon Redis",
+      icon: redis,
+  },
+  {
+      name: "Moon TypeScript",
+      icon: Typescript,
   },
 ];
+
 
 const experiences = [
   {
@@ -171,33 +186,6 @@ const experiences = [
     
 ];
 
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
 
 const projects = [
   {
@@ -399,4 +387,4 @@ const freelanceProjects = [
     },
     
 ];
-export { services, technologies, experiences, testimonials, projects, freelanceProjects };
+export { services, technologies, experiences, projects, freelanceProjects };

@@ -54,10 +54,10 @@ function FreelanceWork() {
         <>
 
             <motion.div variants={textVariant()}>
-                <p className={`${styles.sectionSubText} !mt-[90px] !px-[90px]`}>
-                    My Work
+                <p className={`${styles.sectionSubText} !mt-[90px] !px-[90px] !text-end`}>
+                    My Freelance Work
                 </p>
-                <h2 className={`${styles.sectionHeadText} !px-[90px]`}>Freelance Projects.</h2>
+                <h2 className={`${styles.sectionHeadText} !px-[90px] !text-end`}>Freelance Projects.</h2>
             </motion.div>
 
 

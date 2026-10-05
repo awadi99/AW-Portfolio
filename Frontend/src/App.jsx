@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, FreelanceWork  } from "./components";
+import { About, Contact, Experience, Hero, Navbar, Works, StarsCanvas, FreelanceWork  } from "./components";
 // import StarsCSS from "./components/StarsCSS";
 import { ToastContainer, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Planet from "./components/Planet";
 export default function App() {
   return (
     <>
@@ -14,9 +15,11 @@ export default function App() {
         </div>
         <About />
         <Experience />
-        <Tech />
+        <Planet/>
+        
         <Works />
         <FreelanceWork />
+
         {/* <Feedbacks /> */}
         <div className="relative z-0">
           <Contact />

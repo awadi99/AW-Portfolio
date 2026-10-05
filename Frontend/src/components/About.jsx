@@ -29,8 +29,8 @@ function About() {
     <>
 
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} !px-[90px]`}>Introduction</p>
-        <h2 className={`${styles.sectionHeadText} !px-[90px]`}>OverView.</h2>
+        <p className={`${styles.sectionSubText} !px-[90px] !text-center`}>Introduction</p>
+        <h2 className={`${styles.sectionHeadText} !px-[90px] text-center`}>OverView.</h2>
       </motion.div>
       <div className="flex flex-col md:flex-row items-start gap-10 w-full !sm:w-full">
         <motion.p

@@ -1,0 +1,166 @@
+.personal-solar-system {
+    position: relative;
+    width: 100%;
+    min-height: 900px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(124, 58, 237, 0.12),
+            transparent 30%
+        ),
+        #020106;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.solar-header {
+    position: relative;
+    z-index: 10;
+
+    padding-top: 80px;
+    padding-bottom: 30px;
+
+    text-align: center;
+
+    pointer-events: none;
+
+    background: #020617;
+}
+
+.solar-header span {
+    color: #a855f7;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.solar-header h2 {
+    margin-top: 15px;
+
+    color: white;
+
+    font-size: clamp(
+        35px,
+        5vw,
+        65px
+    );
+
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.solar-header h2 strong {
+    color: #a855f7;
+}
+
+.solar-header p {
+    max-width: 550px;
+
+    margin: 18px auto 0;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.45
+    );
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   CANVAS
+================================ */
+
+.solar-canvas {
+    position: relative;
+
+    width: 100%;
+    height: 750px;
+
+    background: #020106;
+}
+
+.solar-canvas canvas {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: block;
+}
+
+
+/* ================================
+   HINT
+================================ */
+
+.solar-hint {
+    position: relative;
+
+    width: 100%;
+
+    padding: 20px 0 30px;
+
+    text-align: center;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.3
+    );
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    background: #020617;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .personal-solar-system {
+        min-height: 700px;
+    }
+
+    .solar-header {
+        padding:
+            55px 20px 30px;
+    }
+
+    .solar-header h2 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .solar-header p {
+        font-size: 13px;
+    }
+
+    .solar-canvas {
+        height: 520px;
+    }
+
+    .solar-hint {
+        padding: 15px 0 20px;
+
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+}

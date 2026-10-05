@@ -19,7 +19,9 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import arcject from "./tech/arcject.png";
-import threejs from "./tech/threejs.svg";
+import threejs from "./tech/threejs.webp";
+import Typescript from './tech/Typescript.webp'
+import redis from './tech/redis.webp';
 
 import Ajspire from "./company/Ajspire.png";
 import freelancer from "./company/freelancer.webp";
@@ -58,6 +60,8 @@ export {
   tailwind,
   arcject,
   threejs,
+  Typescript,
+  redis,
   Ajspire,
   freelancer,
   Ecode,
