@@ -1,16 +1,31 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "../Loader";
-import { desktop } from "./../../assets/index.js";
+import {
+  OrbitControls,
+  Preload,
+  useGLTF,
+} from "@react-three/drei";
 
-// 3D MODEL
+import CanvasLoader from "../Loader";
+
+// import { desktop } from "./../../assets/index.js";
+
+/* ========================================
+   3D MODEL
+======================================== */
+
 const Computers = () => {
-  const computer = useGLTF("/desktop_pc/scene.gltf");
+  const computer = useGLTF(
+    "/desktop_pc/scene.gltf"
+  );
 
   return (
     <mesh>
-      <hemisphereLight intensity={1.2} groundColor="black" />
+      <hemisphereLight
+        intensity={1.2}
+        groundColor="black"
+      />
+
       <pointLight intensity={0.8} />
 
       <primitive
@@ -23,58 +38,66 @@ const Computers = () => {
   );
 };
 
+/* ========================================
+   COMPUTER CANVAS
+======================================== */
+
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  /*
+    MOBILE LOGIC TEMPORARILY DISABLED
 
-  useEffect(() => {
-    const checkDevice = () => {
-      const ua = navigator.userAgent;
+    const [isMobile, setIsMobile] =
+      useState(false);
 
-      // True mobile detection
-      const isReallyMobile =
-        /Android|iPhone|iPad|iPod/i.test(ua) && !/Tablet|iPad/i.test(ua);
+    useEffect(() => {
+      const checkDevice = () => {
+        ...
+      };
 
-      const smallScreen = window.innerWidth < 768;
+      checkDevice();
 
-      setIsMobile(isReallyMobile || smallScreen);
-    };
+      window.addEventListener(
+        "resize",
+        checkDevice
+      );
 
-    checkDevice();
-    window.addEventListener("resize", checkDevice);
+      return () =>
+        window.removeEventListener(
+          "resize",
+          checkDevice
+        );
+    }, []);
 
-    return () => window.removeEventListener("resize", checkDevice);
-  }, []);
+    if (isMobile) {
+      return (
+        <div>
+          <img
+            src={desktop}
+            alt="mobile-computer"
+          />
+        </div>
+      );
+    }
+  */
 
-  // MOBILE → IMAGE ONLY
-  if (isMobile) {
-    return (
-      <div className="absolute -top-20 right-0 w-full h-full flex items-end justify-center pointer-events-none">
-        <img
-          src={desktop}
-          alt="mobile-computer"
-          className="
-          h-[450px]
-            w-[900px]      
-            max-w-[90%]    
-            mb-[-40px]     
-            opacity-100
-            animate-float
-          "
-        />
-      </div>
-    );
-  }
   // DESKTOP → 3D CANVAS
   return (
     <Canvas
       shadows
       frameloop="demand"
       dpr={[1, 2]}
-      camera={{ position: [15, 3, 5], fov: 30 }}
+      camera={{
+        position: [15, 3, 5],
+        fov: 30,
+      }}
       className="absolute bottom-0 right-0 w-full h-full"
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} enablePan={false} />
+        <OrbitControls
+          enableZoom={false}
+          enablePan={false}
+        />
+
         <Computers />
       </Suspense>
 
