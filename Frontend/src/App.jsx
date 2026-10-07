@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import { About, Contact, Experience, Hero, Navbar, Works, StarsCanvas, FreelanceWork  } from "./components";
-
 import { ToastContainer, Flip } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Planet from "./components/Planet";
