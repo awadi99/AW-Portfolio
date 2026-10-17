@@ -5,6 +5,10 @@ import { services } from '../constants/index.js'
 import { fadeIn, textVariant } from '../utils/motion.js';
 import { SectionWapper } from './../hoc/index.js'
 import { my } from './../assets/index.js'
+import { FileDown } from "lucide-react";
+import Button from './common/ui/Button.jsx';
+import { resume } from '../../public/index.js';
+
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt
     className="xs:w-[250px] w-full"
@@ -44,7 +48,27 @@ function About() {
           Application, and a Quora-style content posting system. I focus on writing scalable code,
           improving performance and continuously learning new technologies to build modern digital
           experiences.
+
+          <motion.div
+            variants={fadeIn("", "", 0.2, 1)}
+            className="px-5 sm:px-10"
+          >
+            <Button
+              as="a"
+              href="/resume.pdf"
+              download="Aditya_Waghmare_Resume.pdf"
+              className="w-[150px] border border-[#915EFF]/60 bg-[#2e1065] text-white hover:bg-[#4c1d95] m-10"
+            >
+              <p className='flex h-10 items-center justify-center m-10'>              
+                <FileDown size={20} strokeWidth={2.2} />
+              Resume</p>
+
+            </Button>
+          </motion.div>
+
+
         </motion.p>
+
         <motion.img
           src={my}
           className="animated-border rounded-full w-40 h-40 object-cover translate-x-20 sm:-translate-x-10"
@@ -57,7 +81,12 @@ function About() {
             ease: "easeInOut",
           }}
         />
+
       </div>
+
+
+
+
 
       <div className='!mt-[20px] !p-[90px] min:w-full flex flex-wrap gap-10'>
         {services.map((service, index) => (

@@ -50,7 +50,7 @@ export default function Navbar() {
             z-10 rounded-xl flex-col gap-4`}
           >
 
-            <ul className="list-none flex flex-col items-center justify-center gap-4 h-[150px]">
+            <ul className="list-none flex flex-col items-center justify-center gap-4 h-[200px]">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
@@ -67,7 +67,6 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-
 
 
       </div>
