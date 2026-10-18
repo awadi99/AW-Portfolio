@@ -7,7 +7,6 @@ import { SectionWapper } from './../hoc/index.js'
 import { my } from './../assets/index.js'
 import { FileDown } from "lucide-react";
 import Button from './common/ui/Button.jsx';
-import { resume } from '../../public/index.js';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt
